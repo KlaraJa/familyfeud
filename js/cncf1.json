@@ -1,0 +1,30 @@
+﻿{
+	"What text editor do you use the most frequently?": [
+		["VS Code", 21],
+		["Vim", 18],
+		["Atom", 14],
+		["Emacs", 12]
+	],
+	"What is the main benefit you get from Kubernetes?": [
+		["Stuff", 32],
+		["Things", 27],
+		["Tech", 15],
+		["Geese", 11],
+		["Mongo", 9],
+		["Web scale", 6]
+	],
+	"What animal do you associate with Kubernetes?": [
+		["Goose", 28],
+		["Tiger", 23],
+		["Red Panda", 15],
+		["Mongoose", 13]
+	],
+	"Name an observability tool": [
+		["Honeycomb", 25],
+		["Lightstep", 23],
+		["Stuff", 18],
+		["Junk", 14],
+		["Nagios", 11],
+		["PagerDuty", 7]
+	]
+}

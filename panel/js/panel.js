@@ -8,7 +8,7 @@ var missPointTeam2 = 0;
 		play_sound('ff_open');
 		document.getElementById("buttonStart").disabled = true;
 			
-		var counter = 33;
+		var counter = 10;
 		var interval = setInterval(function() {
 			counter--;
 			if (counter < 5) {

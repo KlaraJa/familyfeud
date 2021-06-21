@@ -4,7 +4,7 @@ var team2 = window.opener.document.getElementById("team2NAME").value;
 var app = {
   version: 1,
   currentQ: 0,
-  jsonFile:"js/FF3.json",
+  jsonFile:"js/cncf1.json",
   board: $("<div id='gameBoardId' class='gameBoard'>"+
              "<!--- Scores --->"+
              "<div class='score' id='boardScore'>0</div>"+
@@ -216,13 +216,13 @@ var app = {
 		var team2Score = document.getElementById("team2").innerHTML;
 		
 		if(team1Score>team2Score){
-			winner = "Kazanan " + team1 + "Takımı";
+			winner = "Winning " + team1 + "Team";
 		}
 		else if(team1Score<team2Score){
-			winner = "Kazanan " + team2 + "Takımı";
+			winner = "Winning " + team2 + "Team";
 		}
 		else{
-			winner = "Bu mükemmel yarışın kazananı her iki takım!";
+			winner = "It's a tie!";
 		}
 		return winner;
 	}
