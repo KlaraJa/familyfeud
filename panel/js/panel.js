@@ -31,7 +31,7 @@ var missPointTeam2 = 0;
 	
 	function finish_game(){
 		game.document.getElementById("idcLogo").style.width = '50%';
-		game.document.getElementById("welcomePageInfo").innerHTML = "Teşekkürler.";
+		game.document.getElementById("welcomePageInfo").innerHTML = "Thanks.";
 		game.document.getElementById("welcomePageInfo").style.display = "";
 	}
 	

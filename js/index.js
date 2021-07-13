@@ -28,7 +28,7 @@ var app = {
 			   "<div id='missTeam1_2' class= 'miss'>X</div>"+
 			   "<div id='missTeam1_1' class= 'miss'>X</div>"+
                "<div id='awardTeam1' data-team='1' class='button'>" + team1 + "</div>"+
-               "<div id='newQuestion' class='button'>AGÜ YARIŞIYOR</div>"+
+               "<div id='newQuestion' class='button'>Next Question</div>"+
                "<div id='awardTeam2' data-team='2'class='button'>" + team2 + "</div>"+
 			   "<div id='missTeam2_1' class= 'miss'>X</div>"+
 			   "<div id='missTeam2_2' class= 'miss'>X</div>"+
