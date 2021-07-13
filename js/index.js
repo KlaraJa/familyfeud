@@ -216,10 +216,10 @@ var app = {
 		var team2Score = document.getElementById("team2").innerHTML;
 		
 		if(team1Score>team2Score){
-			winner = "Winning " + team1 + "Team";
+			winner = team1 + " Wins!";
 		}
 		else if(team1Score<team2Score){
-			winner = "Winning " + team2 + "Team";
+			winner = team2 + " Wins!";
 		}
 		else{
 			winner = "It's a tie!";
