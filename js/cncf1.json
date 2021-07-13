@@ -1,30 +1,33 @@
 ﻿{
-	"What text editor do you use the most frequently?": [
-		["VS Code", 21],
-		["Vim", 18],
-		["Atom", 14],
-		["Emacs", 12]
+	"What is your favorite programming language?": [
+		["Python", 15],
+		["Go", 8],
+		["Ruby", 7],
+		["Javascript/Typescript", 5],
+		["Bash", 4],
+		["Excel", 2]
 	],
-	"What is the main benefit you get from Kubernetes?": [
-		["Stuff", 32],
-		["Things", 27],
-		["Tech", 15],
-		["Geese", 11],
-		["Mongo", 9],
-		["Web scale", 6]
+	"Name a reason you might not merge a pull request": [
+		["No tests", 11],
+		["No documentation", 9],
+		["Not enough memes/gifs", 7],
+		["Tabs vs spaces", 6],
+		["Breaks functionality", 4],
+		["Revenge", 2]
 	],
 	"What animal do you associate with Kubernetes?": [
-		["Goose", 28],
-		["Tiger", 23],
-		["Red Panda", 15],
-		["Mongoose", 13]
+		["Goose", 9],
+		["Giraffe", 5],
+		["Octopus", 4],
+		["Turtle", 4],
+		["Whale", 3],
+		["Narwhal", 2]
 	],
-	"Name an observability tool": [
-		["Honeycomb", 25],
-		["Lightstep", 23],
-		["Stuff", 18],
-		["Junk", 14],
-		["Nagios", 11],
-		["PagerDuty", 7]
+	"Name a reason someone would give for not backing up their laptop": [
+		["Laziness", 11],
+		["It's all in the cloud", 9],
+		["Data isn't important", 5],
+		["Too hard", 4],
+		["A pure hatred for all that is good", 2]
 	]
 }
