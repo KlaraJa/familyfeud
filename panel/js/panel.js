@@ -36,7 +36,7 @@ var missPointTeam2 = 0;
 	}
 	
 	function open_game_window() {
-		game = window.open('game.html', 'game', 'resizable=yes, width=1930, height=1317');
+		game = window.open('game.html', 'game', 'resizable=yes, width=1890, height=1317');
 		document.getElementById("buttonStart").disabled = false;
 		document.getElementById("buttonOpen").disabled = true;
 		document.getElementById("buttonClose").disabled = false;	
