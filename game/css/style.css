@@ -92,7 +92,7 @@ overflow: auto;
   min-width: 305px;
   margin: auto;
 
-  background: url('../cncf-logo-trans.png') #7d2a2a;
+  background: url('../../images/cncf-logo-trans.png') #7d2a2a;
   background-size: 33px 35px;
   /*background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/40041/bgFF.svg') #84151b;*/
   /*background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/40041/bgFF.svg') #3a84c3;*/

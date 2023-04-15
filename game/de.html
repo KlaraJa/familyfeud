@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de" >
+<head>
+	<meta charset="UTF-8">
+	<title>Family Feud - Game</title>
+<!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+-->
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/css-fireworks.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<style>
+	h1#welcomePageInfo {
+    font-size: 12em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+	font-family: 'Roboto', sans-serif;
+	color: #23538a;
+	}
+	
+	h1#counter { 
+    font-size: 12em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	color: #23538a;
+	}
+</style>
+</head>
+<body>
+<!--  
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+-->	
+	<div id="firework" class="pyro">		
+		<div class="before"></div>		
+		<div class="after"></div>	
+	</div>
+	
+	<div class="idc">  
+		<img id="idcLogo" src="../images/cncf-faceoff-logo.png" width="35%">
+		<h1 id="welcomePageInfo" ><p>Clash of Kinks</p> </h1>
+		<h1 id="counter"></h1>
+		<h1 id="winnerId" class="winner" >Wer wird der Gewinner sein???</h1>
+	</div>
+	
+<script src='js/jquery-2.2.4.min.js'></script>
+<script src='js/TweenMax.min.js'></script>
+<script  src="js/index.js"></script>
+
+</body>
+</html>

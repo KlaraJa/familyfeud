@@ -7,8 +7,9 @@ var missPointTeam2 = 0;
 	function start_game(){	
 		play_sound('ff_open');
 		document.getElementById("buttonStart").disabled = true;
-			
-		var counter = 10;
+
+		//TODO 14.04.2023: Takes too long to start the game, fix that
+		var counter = 6; //Default was 10
 		var interval = setInterval(function() {
 			counter--;
 			if (counter < 5) {
@@ -36,11 +37,18 @@ var missPointTeam2 = 0;
 	}
 	
 	function open_game_window() {
-		game = window.open('game.html', 'game', 'resizable=yes, width=1700, height=1317');
+		game = window.open('../game/en.html', 'game', 'resizable=yes, width=1600, height=1000');
 		document.getElementById("buttonStart").disabled = false;
 		document.getElementById("buttonOpen").disabled = true;
 		document.getElementById("buttonClose").disabled = false;	
 	}
+
+function open_game_window_de() {
+	game = window.open('../game/de.html', 'game', 'resizable=yes, width=1600, height=1000');
+	document.getElementById("buttonStart").disabled = false;
+	document.getElementById("buttonOpen").disabled = true;
+	document.getElementById("buttonClose").disabled = false;
+}
 	
 	function close_game_window() {
 		game.close();
@@ -62,7 +70,7 @@ var missPointTeam2 = 0;
 	// play sound object
 	var audio = new Audio('');
 	function play_sound(sound) {
-		var audio = new Audio('sfx/'+sound);
+		var audio = new Audio('/sfx/'+sound);
 		audio.play();
 	}
 	
@@ -257,8 +265,12 @@ var missPointTeam2 = 0;
 	
 	function changeTeamPoint(){
 		game.teamPointChange();
-		document.getElementById("team1POINT").innerHTML = game.document.getElementById("team1").value;
-		document.getElementById("team2POINT").innerHTML = game.document.getElementById("team2").value;
+		if (game.document.getElementById("team1").value !== ""){
+			document.getElementById("team1POINT").innerHTML = "Team 1";
+		}
+		if (game.document.getElementById("team2").value !== ""){
+			document.getElementById("team2POINT").innerHTML = "Team 2";
+		}
 	}
 	
 	function changeTurn(){

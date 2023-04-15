@@ -1,0 +1,118 @@
+<head>
+    <title>Family Feud - Admin Panel</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/panel.js"></script>
+</head>
+
+<body class="gameBoard">
+
+    <br>
+    <br>
+
+    <div class="container">
+		
+		<div class="form-group row">
+		  <div class="col-xs-2">
+			<label>Team 1:</label>
+              <label for="team1NAME"></label><input class="form-control" id="team1NAME" type="text" value="Students">
+		  </div>
+		  <div class="col-xs-2">
+			<label>Team 2:</label>
+              <label for="team2NAME"></label><input class="form-control" id="team2NAME" type="text" value="Instructors">
+		  </div>
+            <br>
+		  <div class="col-xs-2">
+			<button id="buttonChangeName" type="button" class="btn btn-info" onclick="changeTeamNames();">Team namen ändern!</button>
+		  </div>
+		</div>
+	
+        <button id="buttonOpen" type="button" class="btn btn-success" onclick="open_game_window_de();">Spiel öffnen</button>
+        <button id="buttonStart" type="button" class="btn btn-primary" onclick="start_game();" disabled>Spiel starten</button>
+        <button id="buttonFinish" type="button" class="btn btn-info" onclick="gameCompleted();">Spiel beenden</button>
+        <button id="buttonWinner" type="button" class="btn btn-info" onclick="announceWinner();" disabled>Gewinner!</button>
+        <button id="buttonClose" type="button" class="btn btn-danger" onclick="close_game_window();" disabled>Spiel schließen</button>
+		
+		<br>
+        <br>
+
+        <button id="buttonTurnT1" type="button" class="btn" onclick="turnOfTeam('team1');">Runde für Team 1</button>
+        <button id="buttonMistakeT1" type="button" class="btn" onclick="showMissPoint('1');" disabled>Team 1 Fehler <span id="misspoint1" class="label label-danger">0</span></button>
+        <button id="buttonMistakeT2" type="button" class="btn" onclick="showMissPoint('2');" disabled>Team 2 Fehler <span id="misspoint2" class="label label-danger">0</span></button>
+        <button id="buttonTurnT2" type="button" class="btn" onclick="turnOfTeam('team2');">Runde für Team 2</button>
+
+        <br>
+        <br>
+
+        <h2>Soundeffekte:</h2>
+
+        <button type="button" class="btn btn-default" onclick="play_sound('ff-strike.wav');">Falsche Antwort</button>
+        <button type="button" class="btn btn-default" onclick="play_sound('dun.mp3');">BONUS Antwort</button>
+        <button type="button" class="btn btn-default" onclick="play_sound('applause.mp3');">Applaus</button>
+        <button type="button" class="btn btn-default" onclick="play_sound('yeah.ogg');">YEAH</button>
+        <button type="button" class="btn btn-default" onclick="play_sound('boo.ogg');">BOO</button>
+        <button type="button" class="btn btn-default" onclick="play_sound('clock.ogg');">Zeit zu Ende</button>
+        <button type="button" class="btn btn-default" onclick="play_sound('ticking_clock_10sec.mp3');">Uhr Ticken</button>
+        <!-- FIXME 15.04.2023: This button does not work -->
+        <!-- <button type="button" class="btn btn-default" onclick="pause_sound();">Stop</button> -->
+
+        <br>
+        <br>
+
+		<h2>Frage <span id="currentQ">C</span>/<span id="totalQ">T</span>: <span id="question" class="label label-default">Öffne das Spiel um eine Frage zu bekommen.</span></h2>
+		
+        <h2>Antworten:</h2>
+
+        <div id="answerInfo">
+            Sobald das Spiel gestartet ist, werden hier die Antworten angezeigt.
+        </div>
+
+        <table id="tableAnswers" class="table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Antwort</th>
+                    <th>Punkt</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+		
+        <br>
+        <br>
+		<button id="buttonAwardT1" type="button" class="btn btn-primary" onclick="calculatePoints('1');" disabled>Punkte für Team 1 gutschreiben</button>
+        <button id="buttonAwardT2" type="button" class="btn btn-primary" onclick="nextQuestion();" disabled>Nächste Frage</button>
+        <button id="buttonAwardT3" type="button" class="btn btn-primary" onclick="calculatePoints('2');" disabled>Punkte für Team 2 gutschreiben</button>
+		<br>
+        <br>
+		<div class="form-group row">
+		  <div class="col-xs-2">
+			<label>Punkte Team 1:</label>
+              <label for="team1POINT"></label><input class="form-control" id="team1POINT" type="text" >
+		  </div>
+		  <div class="col-xs-2">
+			<label>Punkte Team 2:</label>
+              <label for="team2POINT"></label><input class="form-control" id="team2POINT" type="text" >
+		  </div>
+            <br>
+		  <div class="col-xs-2">
+			<button id="buttonChangePOINT" type="button" class="btn btn-info" onclick="changeTeamPoint();">Punkte überschreiben!</button>
+		  </div> 
+		  <div class="col-xs-2">
+			<button id="buttonTurnExchange" type="button" class="btn btn-success" onclick="changeTurn();">Runde für das andere Team!</button>
+		  </div>
+		</div>
+
+        <br>
+        <br>
+        <a href="en.html">Switch to english</a>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>

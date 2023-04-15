@@ -4,7 +4,7 @@ var team2 = window.opener.document.getElementById("team2NAME").value;
 var app = {
   version: 1,
   currentQ: 0,
-  jsonFile:"js/cncf1.json",
+  jsonFile:"js/questions.json",
   board: $("<div id='gameBoardId' class='gameBoard'>"+
              "<!--- Scores --->"+
              "<div class='score' id='boardScore'>0</div>"+
@@ -28,7 +28,8 @@ var app = {
 			   "<div id='missTeam1_2' class= 'miss'>X</div>"+
 			   "<div id='missTeam1_1' class= 'miss'>X</div>"+
                "<div id='awardTeam1' data-team='1' class='button'>" + team1 + "</div>"+
-               "<div id='newQuestion' class='button'>Next Question</div>"+
+                //TODO 14.04.2023: delete this button
+               //"<div id='newQuestion' class='button'>Next Question</div>"+
                "<div id='awardTeam2' data-team='2'class='button'>" + team2 + "</div>"+
 			   "<div id='missTeam2_1' class= 'miss'>X</div>"+
 			   "<div id='missTeam2_2' class= 'miss'>X</div>"+
@@ -187,7 +188,7 @@ var app = {
     app.makeQuestion(app.currentQ)
 	window.opener.GetAnswers(qAnswr, app.currentQ, currentQ);
   },
-  // Inital function
+  // Initial function
   init: function(){
     $.getJSON(app.jsonFile, app.jsonLoaded)
     app.board.find('#newQuestion' ).on('click', app.changeQuestion)
@@ -197,9 +198,13 @@ var app = {
 
   }  
 }
-	function teamPointChange(){		
-		document.getElementById("team1").innerHTML = window.opener.document.getElementById("team1POINT").value;
-		document.getElementById("team2").innerHTML = window.opener.document.getElementById("team2POINT").value;
+	function teamPointChange(){
+        if (window.opener.document.getElementById("team1POINT").value !== "") {
+            document.getElementById("team1").innerHTML = window.opener.document.getElementById("team1POINT").value;;
+        }
+		if (window.opener.document.getElementById("team2POINT").value !== "") {
+            document.getElementById("team2").innerHTML = window.opener.document.getElementById("team2POINT").value;;
+        }
 	}
 
 	function teamNameChange(){
