@@ -5,7 +5,7 @@ var missPointTeam1 = 0;
 var missPointTeam2 = 0;
 
 function start_game() {
-    play_sound('ff_open');
+    play_sound('ff_open.mp3');
     document.getElementById("buttonStart").disabled = true;
 
     //TODO 14.04.2023: Takes too long to start the game, fix that
@@ -132,7 +132,7 @@ function calculatePoints(team) {
         game.document.getElementById("awardTeam2").click();
     }
 
-    play_sound('ff_dogru');
+    play_sound('ff_dogru.mp3');
 }
 
 function GetQuestion(questionParam) {
@@ -156,7 +156,7 @@ function GetAnswers(answers, currentQnumber, totalQnumber) {
             var tempBgColor = this.style.backgroundColor;
             if (tempBgColor == "") {
                 this.setAttribute("style", "background-color: lightgreen;");
-                play_sound('ff-clang');
+                play_sound('ff-clang.wav');
             } else if (tempBgColor == "lightgreen") {
                 this.setAttribute("style", "background-color: ;");
             }
